@@ -1,6 +1,3 @@
-// Alexander Leccese
-// Computer Vission, Assignment 2, part 1
-// Purpose: apply a 2-d fourier transform of an image and display its spectrum
 
 #include <math.h>
 #include <stdlib.h>
