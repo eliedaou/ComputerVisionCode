@@ -1,0 +1,42 @@
+These files were created by Elie Daou for Dr. Megherbi's Computer Vision class at the Universtiy of Massachusetts Lowell.
+
+This code reads an input image (256x256 mri image, not the 256x342 Porsche image) and:
+	Part 1: Outputs two 256x256 image files. The first is the centered spectrum of the inputted (256x256) file. 
+                The second is the original 256x256 inputted file, after it has been fourier-ed and inveresed.
+	Part 2: Outputs two 256x256 image files, as well. The first is the centered butterworth filter in a (256x256) file. 
+                The second is the original 256x256 inputted file, after it has been had the butterworth LPF applied.
+
+This directory should contain the following files:
+EdaouLab2Report.pdf
+makefile
+mri
+Prog2_edaou.c
+README_edaou
+various .png screenshots of the results (these are also in the report)
+
+To compile the program type:
+$ make
+
+To clean the object file and created mri output files type:
+$ make clean
+
+run the code by typing:
+$ ./Prog2_edaou mri 
+
+To view the original mri image type:
+$ (echo P5; echo 256 256; echo 255; cat mri) | xv -
+
+To view the output spectrum image for part 1:
+$ (echo P5; echo 256 256; echo 255; cat Centered_Spectrum) | xv -
+
+To view the original mri image after it’s been processed for part 1:
+$ (echo P5; echo 256 256; echo 255; cat Inverted_Original_Image) | xv -
+
+To view the output butterworth filter for part 2 :
+$ (echo P5; echo 256 256; echo 255; cat Butterworth_Filter) | xv -
+
+To view the output butterworth filter for part 2 :
+$ (echo P5; echo 256 256; echo 255; cat Buttered_Filtered_Image) | xv -
+
+
+

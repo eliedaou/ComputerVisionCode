@@ -1,0 +1,34 @@
+These files were created by Elie Daou for Dr. Megherbi's Computer Vision class at the Universtiy of Massachusetts Lowell.
+
+This code reads an input image (256x256 mri image, not the 256x342 Porsche image) and:
+	Part 1: Outputs a 256x256 image file that is modified from the original image. The left half is left untouched
+		and the right half is just black 
+	Part 2: Outputs a 128x128 image file that is the original image scaled down. AKA only copying the even pixels
+		in the vertical and horizontal directions.
+
+This directory should contain the following files:
+EdaouLab1Report.pdf
+makefile
+mri
+Prog1_Edaou.c
+README_edaou
+
+To compile the program type:
+$ make
+
+run the code by typing:
+$ ./Prog1_sample mri mri_outP1 mri_outP2 
+
+To view the original mri image type:
+$ (echo P5; echo 256 256; echo 255; cat mri) | xv -
+
+To view the output mri image for part 1 (black-out right half of the image):
+$ (echo P5; echo 256 256; echo 255; cat mri_outP1) | xv -
+
+To view the output mri image for part 2 (Only transfer each even pixel, both horizontally and vertically):
+$ (echo P5; echo 128 128; echo 255; cat mri_outP1) | xv -
+
+To clean the object file and created mri output files type:
+make clean
+
+
